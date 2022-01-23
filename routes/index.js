@@ -10,4 +10,6 @@ console.log('router loaded')
 //router.get('/',homeController.home)
 router.get('/',homeController.show)
 
+router.use('/users',require('./users'));
+
 module.exports =router; // it is used to export the router to index.js where we will use it
