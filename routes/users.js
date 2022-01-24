@@ -11,7 +11,11 @@ router.get('/', function(req,res){
 })
 router.get('/profile' ,usersController.profile);
 
-router.get('/posts',usersPostController.posts)
+router.get('/posts',usersPostController.posts);
+
+router.get('/sign-up', usersController.signUp);
+
+router.get('/sign-in',usersController.signIn);
 
 
 module.exports =router;
