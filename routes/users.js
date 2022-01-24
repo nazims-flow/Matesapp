@@ -11,7 +11,7 @@ router.get('/', function(req,res){
 })
 router.get('/profile' ,usersController.profile);
 
-router.get('/posts',usersPostController)
+router.get('/posts',usersPostController.posts)
 
 
 module.exports =router;
