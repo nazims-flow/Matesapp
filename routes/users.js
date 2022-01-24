@@ -7,7 +7,7 @@ const usersPostController = require('../controllers/posts_controller')
 
 
 router.get('/', function(req,res){
-    res.send('nothing after user')
+    res.send('<h1>nothing after user</h1>')
 })
 router.get('/profile' ,usersController.profile);
 
