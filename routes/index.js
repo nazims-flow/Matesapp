@@ -5,10 +5,10 @@ const router = express.Router()
 
 const homeController = require('../controllers/home_controller');  // it will require home_controller before action of get and executing exported function home
 
-console.log('router loaded')
+console.log('router loaded');
 
 //router.get('/',homeController.home)
-router.get('/',homeController.show)
+router.get('/',homeController.home);
 
 router.use('/users',require('./users'));
 
