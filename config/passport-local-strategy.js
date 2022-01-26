@@ -82,7 +82,7 @@ passport.setAuthenticatedUser = function (req , res , next){
         res.locals.user = req.user;
        }
 
-       next();
+       next();  // referncing it to index.js
 }
 
 module.exports = passport;

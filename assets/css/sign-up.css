@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #e8ffff;
+}
+body body {
+  height: 100vh;
+  margin: 0;
+}
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #a6f6f1;
+}
+.header .logo {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.5em;
+  color: #00af91;
+}
+.header .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+.header .main-nav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header .main-nav a:hover {
+  color: blueviolet;
+}
+.header .main-nav .email {
+  text-transform: lowercase;
+}
+
+footer {
+  margin-top: 100vh;
+  min-height: 50px;
+  background-color: #a6f6f1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+footer .main-nav a {
+  padding: 10px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+footer .main-nav a:hover {
+  color: blueviolet;
+}
+
+/*# sourceMappingURL=sign-up.css.map */

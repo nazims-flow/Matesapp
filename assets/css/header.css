@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: A6F6F1;
+}
+.header .logo {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.5em;
+  color: 0AF91;
+}
+.header .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+.header .main-nav a {
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header .main-nav a:hover {
+  color: blueviolet;
+}
+.header .main-nav .email {
+  text-transform: lowercase;
+}
+
+/*# sourceMappingURL=header.css.map */

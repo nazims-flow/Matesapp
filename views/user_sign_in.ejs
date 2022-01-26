@@ -1,8 +1,75 @@
-<h1>Sign In</h1>
 
-<form action="/users/create-session" method="POST">
-    <input type='email' name="email" placeholder="Your Email" required>
-    <input type='password' name="password" placeholder="Password" required>
-    <input type="submit" value="Sign In">
+<!DOCTYPE html>
+<html lang="en">
+    
+     
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+     <title>Document</title>
+     <link rel="stylesheet" href="/css/sign-up.css">
 
-</form>
+<header class='header' >
+    <h1 class='logo'>MateSapp</h1>
+    <ul class="main-nav">
+        <% if (locals.user){ %>
+            <li id="email">
+                <a href="/users/profile" class ='email'><%= user.email %></a> 
+            </li>
+            <li>
+                <a href="/users/profile"><%= user.name %></a>
+            </li>
+            <li>
+                <a href="/users/sign-out">Sign Out</a>
+            </li>
+            
+
+        <% }else{%>
+            <li>
+                <a href="/users/sign-up">Sign Up</a>
+            </li>
+
+        <% } %>
+    </ul>
+</header>
+
+<body>
+    
+    <h1>Sign In</h1>
+
+    <form action="/users/create-session" method="POST">
+        <input type='email' name="email" placeholder="Your Email" required>
+        <input type='password' name="password" placeholder="Password" required>
+        <input type="submit" value="Sign In">
+    
+    </form>
+    
+
+
+<footer>
+    
+    <ul class="main-nav">
+        <% if (locals.user){ %>
+
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/users/profile">Profile</a></li>
+            
+
+        <% }else{%>
+            <li>
+                <a href="/">Home</a>
+            </li>
+        <% } %>
+    </ul>
+    <p>@MateSapp.All Rights Reserved</p>
+</footer>
+<body>
+
+
+</html>
+
+
+

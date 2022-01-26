@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+   
+    footer{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: A6F6F1;
+        
+        .main-nav{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            padding-left: 0;
+            
+
+            a {
+                padding: 10px 10px;
+                text-transform: uppercase;
+                text-decoration: none;
+                display: block;
+                &:hover{
+                    color: blueviolet;
+                }
+                
+            }
+
+
+        }
+    }
+}

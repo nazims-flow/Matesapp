@@ -15,7 +15,7 @@ module.exports.signUp = function(req, res){
         res.redirect('/users/profile');
     }
     return res.render('user_sign_up', {
-        title: "Codeial | Sign Up"
+        layout:false
     })
 }
 
@@ -26,7 +26,7 @@ module.exports.signIn = function(req, res){
         res.redirect('/users/profile');
     }
     return res.render('user_sign_in', {
-        title: "Codeial | Sign In"
+        layout:false
     })
 }
 

@@ -1,12 +1,23 @@
-<header>
-    Page Header
-    <ul>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/header.css">
+
+<header class='header' >
+    <h1 class='logo'>MateSapp</h1>
+    <ul class="main-nav">
         <% if (locals.user){ %>
+            <li id="email">
+                <a href="/users/profile" class ='email'><%= user.email %></a> 
+            </li>
             <li>
-                <a href="/users/profile"><%=user.name%></li></a>
+                <a href="/users/profile"><%= user.name %></a>
+            </li>
             <li>
                 <a href="/users/sign-out">Sign Out</a>
             </li>
+            
 
         <% }else{%>
             <li>

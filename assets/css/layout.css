@@ -1,4 +1,6 @@
-body{
-    margin: 0;
-    /*text-align: center;*/
+body #layout-main {
+  height: 100%;
+  background-color: E8FFFF;
 }
+
+/*# sourceMappingURL=layout.css.map */
