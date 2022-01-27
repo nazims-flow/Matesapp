@@ -2,6 +2,7 @@ const User = require('../models/user');
 
 
 module.exports.profile = function(req, res){
+    console.log(req.body.name)
    
     return res.render('profile', {
         title: 'User Profile'
@@ -22,8 +23,11 @@ module.exports.signUp = function(req, res){
 
 // render the sign in page
 module.exports.signIn = function(req, res){
+    
     if(req.isAuthenticated()){
+        console.log(req.body);
         res.redirect('/users/profile');
+        
     }
     return res.render('user_sign_in', {
         layout:false
