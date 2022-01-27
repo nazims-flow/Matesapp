@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+* footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: A6F6F1;
+}
+* footer .main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+* footer .main-nav a {
+  padding: 10px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+* footer .main-nav a:hover {
+  color: blueviolet;
+}
+
+/*# sourceMappingURL=footer.css.map */
