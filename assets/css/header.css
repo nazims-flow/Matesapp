@@ -32,8 +32,5 @@
 .header .main-nav a:hover {
   color: blueviolet;
 }
-.header .main-nav .email {
-  text-transform: lowercase;
-}
 
 /*# sourceMappingURL=header.css.map */
