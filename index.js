@@ -7,6 +7,8 @@ const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 const db = require('./config/mongoose');
 const MongoStore =require('connect-mongo');
+const flash = require('connect-flash');
+const customWare = require('./config/middleware');
 
 
 
@@ -57,6 +59,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthenticatedUser);
+
+app.use(flash()); // these uses session cookie flash message will be setup in th cookie in which it stores session info
+app.use(customWare.setFlash);
 
 // use express router
 app.use('/', require('./routes'));
