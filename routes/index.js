@@ -12,5 +12,6 @@ router.get('/',homeController.home);
 
 router.use('/users',require('./users'));
 router.use('/posts',require('./posts'));
+router.use('/comments',require('./comments'));
 
 module.exports =router; // it is used to export the router to index.js where we will use it

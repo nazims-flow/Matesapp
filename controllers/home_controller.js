@@ -1,5 +1,6 @@
 
 const Post = require('../models/post');
+const User = require('../models/user');
 
 module.exports.home = function(req, res){
     
@@ -12,12 +13,24 @@ module.exports.home = function(req, res){
     }); */
 
 
-    Post.find({}).populate('user').exec(function(err , posts){  // populate the user for each post
-        return res.render('home', {
-            title:"Home" ,
-            posts: posts 
-        })
+    Post.find({})
+    .populate('user')   // at first populate user than populate comments and then it will again populate user of that particular comment
+    .populate({
+        path :'comments',  //// nested prepopulating
+        populate:{
+            path:'user'
+        }
     })
+    .exec(function(err , posts){  // populate the user for each post
+        User.find({},function(err, users){
+            return res.render('home', {
+                title:"Home" ,
+                posts: posts ,
+                all_users : users
+            });
+        });
+        
+    });
     
     
     

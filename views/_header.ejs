@@ -9,10 +9,10 @@
     <ul class="main-nav">
         <% if (locals.user){ %>
             <li id="email">
-                <a href="/users/profile" class ='email'><%= user.email %></a> 
+                <a href="/users/profile/<%=user.id%>" class ='email'><%= user.email %></a> 
             </li>
             <li>
-                <a href="/users/profile"><%= user.name %></a>
+                <a href="/users/profile/<%=user.id%>"><%= user.name %></a>
             </li>
             <li>
                 <a href="/users/sign-out">Sign Out</a>
